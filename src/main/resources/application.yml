@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ms-payment
+    username: postgres
+    password: admin
+    driver-class-name: org.postgresql.Driver
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  liquibase:
+    change-log: classpath:liquibase/changelog-master.yml
+
+client:
+  micro-service-country:
+    endpoint: http://localhost:8081
+
