@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 
 public interface PaymentMapper {
 
-    static Payment mapRequestToEntity(PaymentRequest request) {
+    public static Payment mapRequestToEntity(PaymentRequest request) {
         return Payment.builder()
                 .amount(request.getAmount())
                 .description(request.getDescription())
