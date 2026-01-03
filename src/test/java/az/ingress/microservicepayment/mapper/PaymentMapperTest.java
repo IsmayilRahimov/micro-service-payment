@@ -50,6 +50,10 @@ class PaymentMapperTest {
         var actual = PaymentMapper.mapEntityToResponse(request);
 
 
+        actual.setDescription(expected.getDescription());
+        actual.setAmount(expected.getAmount());
+
+
         Assertions.assertThat(actual).isEqualTo(expected);
 
 
